@@ -1,3 +1,7 @@
+<?php
+  require_once "func.php";
+?>
+
 <!DOCTYPE html>
 <html lang="pt-be">
 <head>
@@ -9,12 +13,7 @@
   <link href="style.css" rel="stylesheet">
 </head>
 <body>
-  <input class="input-letra" id="l-a-1" type="text" name="letra-1" maxlength="1">
-  <input class="input-letra" id="l-a-2" type="text" name="letra-2" maxlength="1">
-  <input class="input-letra" id="l-a-3" type="text" name="letra-3" maxlength="1">
-  <input class="input-letra" id="l-a-4" type="text" name="letra-4" maxlength="1">
-  <input class="input-letra" id="l-a-5" type="text" name="letra-5" maxlength="1">
-
+  <?php gerarHTMLLinha(); ?>
   <script src="script.js"></script>
 </body>
 </html>

@@ -14,12 +14,17 @@
 
 document.addEventListener('keypress', function(e) {
   if(e.key == "Enter") {
-    alert("enter");
+    verificarLetras("1");
   }
 });
 
 function verificarLetras(linha) {
-  /*verifica se todas as letras estão preenchidas*/
+  var palavra = '';
+  for(var i = 1; i < 6; i++) {
+    palavra += document.getElementById("l-" + linha + "-" + i).value;
+  }
+
+  alert(palavra);
 }
 
 function verificarPalavra(palavra) {
