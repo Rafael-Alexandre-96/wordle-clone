@@ -1,6 +1,4 @@
-<?php
-  require_once "func.php";
-?>
+<?php require_once "func.php"; ?>
 
 <!DOCTYPE html>
 <html lang="pt-be">

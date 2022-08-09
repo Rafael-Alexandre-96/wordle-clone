@@ -12,9 +12,11 @@
 
 });*/
 
+var tentativa = 1;
+
 document.addEventListener('keypress', function(e) {
   if(e.key == "Enter") {
-    verificarLetras("1");
+    verificarLetras(tentativa);
   }
 });
 
@@ -24,9 +26,24 @@ function verificarLetras(linha) {
     palavra += document.getElementById("l-" + linha + "-" + i).value;
   }
 
-  alert(palavra);
+  var quantidadeLetras = palavra.length;
+
+  if (quantidadeLetras == 5) {
+    verificarPalavra(palavra);
+  } else {
+    alert("A palavra precisa ter 5 letras");
+  }
 }
 
 function verificarPalavra(palavra) {
-  /*verifica se a palavra é possivel*/
+  if (palavra == "RADAR") {
+    alert("Voce venceu!");
+  } else {
+    alert("Voce errou a palavra!");
+    tentativa++;
+  }
+
+  if (tentativa > 6) {
+    alert("Você perdeu!");
+  }
 }
